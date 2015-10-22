@@ -1,0 +1,50 @@
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  color: #747704;
+}
+
+.thin-text {
+  font-weight: 300;
+}
+
+.container {
+  max-width: calc(948px + 15px * 2);
+}
+
+.header {
+  margin-top: 40px;
+}
+
+.portfolio-item a,
+.portfolio-item a:visited {
+  color: inherit;
+}
+
+.portfolio-item p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-top: 15px;
+}
+
+h2 {
+  color: #bcbbbb;
+  font-size: 3.5rem;
+  margin: 42px 0 15px 8px;
+}
+
+h3 {
+  font-size: 3.6rem;
+  margin: 13px 0 10px;
+  text-transform: uppercase;
+}
+
+hr {
+  background-color: #bcbbbb;
+  height: 4px;
+  margin-top: 9px;
+  margin-bottom: 30px;
+}
