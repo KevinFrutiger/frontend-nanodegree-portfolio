@@ -2,9 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Kevin Frutiger’s Web Development Portfolio</title>
-  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Frutiger’s Web Development Portfolio</title>
+  <meta name="description" content="Kevin Frutiger's Web Development Portfolio from Udacity Front-end Web Deveopment Nanodegree.">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -12,11 +13,11 @@
 <body>
   <div class="container">
     <header class="row header">
-      <div class="col-md-3">
-        <img src="images/udacity-logo.png" alt="Udacity logo">
+      <div class="col-sm-2 col-md-4">
+        <img class="img-responsive logo" src="images/udacity-logo.svg" width="130" height="127" alt="Udacity logo">
       </div>
-      <div class="col-md-9 text-uppercase text-right">
-        <h1 class="thin-text">Kevin Frutiger</h1>
+      <div class="col-sm-10 col-md-8 text-uppercase text-right">
+        <h1 class="text-thin">Kevin Frutiger</h1>
         <h4>Front-end Ninja</h4>
       </div>
     </header>
@@ -27,30 +28,50 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <img class="img-responsive" src="images/hero@1x.jpg" alt="">
+        <picture>
+          <!-- reframed for small screens -->
+          <source
+            media="screen and (max-width: 375px)"
+            srcset="images/hero-reframed-small@2x.jpg 2x,
+                    images/hero-reframed-small@1x.jpg 1x">
+
+          <!-- reframed for medium screens -->
+          <source
+            media="screen and (max-width: 650px)"
+            srcset="images/hero-reframed-med@2x.jpg 2x,
+                    images/hero-reframed-med@1x.jpg 1x">
+
+          <!-- full -->
+          <source
+            media="screen and (min-width: 651px)"
+            srcset="images/hero@2x.jpg 2x,
+                    images/hero@1x.jpg 1x">
+
+          <img class="img-responsive" src="images/hero@1x.jpg" alt="">
+        </picture>
       </div>
     </div>
     <section class="row">
-      <!-- Symantically, Featured Work should be the heading of a section,
-           so using fact that Bootstrap wraps columns in 12-col groups to create
-           two rows visually. -->
-      <div class="col-md-12 thin-text"> <!-- wrap remaining columns -->
+      <!-- Using Bootstrap's column wrapping behaviour to visually keep Featured Work on
+           its own row while maintaining symantic grouping with content it's a heading for. -->
+      <div class="col-sm-12 col-md-12 text-thin">
         <h2>Featured Work</h2>
       </div>
-      <!-- TODO: update portfolio items to the real projects -->
-      <div class="col-md-4 portfolio-item">
-        <img class="img-responsive" src="images/portfolio-thumbnail-placeholder@1x.png" alt="Portfolio 1 thumbnail">
-        <h3>Appify</h3>
+
+      <!-- TODO: update portfolio items to the real projects. Art direct with final images. -->
+      <div class="col-sm-4 col-md-4 center-block portfolio-item">
+        <a href="#"><img class="img-responsive" src="images/portfolio-thumbnail-placeholder@1x.png" alt="Portfolio 1 thumbnail"></a>
+        <h3>Project 1</h3>
         <p><a href="#">https://github.com/placeholder</a></p>
       </div>
-      <div class="col-md-4 portfolio-item">
-        <img class="img-responsive" src="images/portfolio-thumbnail-placeholder@1x.png" alt="Portfolio 2 thumbnail">
-        <h3>Sunflower</h3>
+      <div class="col-sm-4 col-md-4 center-block portfolio-item">
+        <a href="#"><img class="img-responsive" src="images/portfolio-thumbnail-placeholder@1x.png" alt="Portfolio 2 thumbnail"></a>
+        <h3>Project 2</h3>
         <p><a href="#">https://github.com/placeholder</a></p>
       </div>
-      <div class="col-md-4 portfolio-item">
+      <div class="col-sm-4 col-md-4 center-block portfolio-item">
         <img class="img-responsive" src="images/portfolio-thumbnail-placeholder@1x.png" alt="Portfolio 3 thumbnail">
-        <h3>Bokeh</h3>
+        <h3>Project 3</h3>
         <p><a href="#">https://github.com/placeholder</a></p>
       </div>
     </section>

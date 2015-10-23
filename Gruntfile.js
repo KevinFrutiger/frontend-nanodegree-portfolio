@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          cwd: 'src/images-src/',
+          cwd: 'src/images_src/',
           src: ['*.{gif,jpg,png}'],
           dest: 'src/images/'
         }]
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       }
     },
 
-    /* Generate the images directory if it is missing */
+    /* Generate the images directory, in case it's missing */
     mkdir: {
       generateImages: {
         options: {
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       generateImages: {
         files: [{
           expand: true,
-          cwd: 'src/images-src/fixed',
+          cwd: 'src/images_src/fixed',
           src: ['*'],
           dest: 'src/images/'
         }]
