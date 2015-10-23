@@ -15,12 +15,6 @@ h2 {
   margin: 42px 0 15px 8px;
 }
 
-h3 {
-  font-size: 3.6rem;
-  margin: 13px 0 10px;
-  text-transform: uppercase;
-}
-
 hr {
   background-color: #bcbbbb;
   height: 4px;
@@ -47,6 +41,12 @@ hr {
 
 
 /* Portfolio items */
+
+h3 {
+  font-size: 3.6rem;
+  margin: 13px 0 10px;
+  text-transform: uppercase;
+}
 
 .portfolio-item {
   text-align: center;
