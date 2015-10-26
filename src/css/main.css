@@ -21,7 +21,7 @@ hr {
 }
 
 .container {
-  max-width: calc(948px + 15px * 2);
+  max-width: 918px; /* 948px + container padding * 2 */
 }
 
 
