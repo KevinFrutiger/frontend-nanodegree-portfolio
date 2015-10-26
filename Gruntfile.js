@@ -11,11 +11,17 @@ module.exports = function(grunt) {
           sizes: [{
             width: '100%',
             rename: false,
+            suffix: '@3x',
+            quality: 80
+          },
+          {
+            width: '66.66%',
+            rename: false,
             suffix: '@2x',
             quality: 80
           },
           {
-            width: '50%',
+            width: '33.33%',
             rename: false,
             suffix: '@1x',
             quality: 80
