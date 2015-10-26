@@ -1,7 +1,8 @@
 body {
-  color: #747704;
-  font-family: "Lato", sans-serif;
+  color: #8c803f;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  font-size: 1.6rem;
 }
 
 h1 {
@@ -21,7 +22,7 @@ hr {
 }
 
 .container {
-  max-width: 918px; /* 948px + container padding * 2 */
+  max-width: 978px; /* 948px + container padding * 2 */
 }
 
 
@@ -30,6 +31,13 @@ hr {
 
 .header {
   margin-top: 40px;
+}
+
+
+/* Hero image */
+
+.hero-image {
+  border-radius: 20px;
 }
 
 
@@ -63,6 +71,12 @@ h3 {
   font-size: 1.6rem;
 }
 
+.portfolio-thumbnail {
+  border-radius: 10px;
+}
+
+
+/* Modal customization */
 
 .modal-body img {
   margin-bottom: 10px;
@@ -82,6 +96,13 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+  h2 {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+    text-align: center;
+  }
+
   .logo {
     margin-top: 0;
   }
@@ -90,10 +111,10 @@ h3 {
     margin-top: 10px;
   }
 
-  h2 {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 300px;
-    text-align: center;
+  .hero-image,
+  .portfolio-thumbnail {
+    border-radius: 0;
   }
+
+
 }
