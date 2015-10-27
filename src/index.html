@@ -6,6 +6,7 @@
   <title>Kevin Frutiger’s Web Development Portfolio</title>
   <meta name="description" content="Kevin Frutiger's Web Development Portfolio from Udacity Front-end Web Deveopment Nanodegree.">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">
+  <!-- Got CDN link from http://getbootstrap.com/getting-started/#download -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -165,11 +166,18 @@
 
   <!-- Bootstrap JS + jQuery, for modals -->
 
-  <!-- Placing SCRIPTs at bottom of doc per my existing knowledge plus the Bootstrap example template -->
+  <!--
+    Placing SCRIPTs at bottom of doc per my existing knowledge plus the Bootstrap example template
+    http://getbootstrap.com/getting-started/#template
+  -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-  <!-- Using full JS from CDN to take advantage of caching instead of using (presumably) smaller self-hosted Button and Modal modules -->
+  <!--
+    Using full JS from CDN to take advantage of caching instead of using (presumably) smaller self-hosted Button and Modal modules
+    http://getbootstrap.com/getting-started/#download
+      (Note: Removed integrity attribute for now since it doesn't validate.)
+  -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
