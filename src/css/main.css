@@ -31,6 +31,10 @@ hr {
   margin-top: 40px;
 }
 
+.tagline {
+  color: #847725;
+  font-weight: 500;
+}
 
 /* Hero image */
 
@@ -43,7 +47,7 @@ hr {
 /* Portfolio items */
 
 h2 {
-  color: #bcbbbb;
+  color: #959494;
   font-size: 3.5rem;
   margin: 42px 0 15px 0;
   padding: 0 8px;
@@ -62,7 +66,7 @@ h3 {
 
 .portfolio-item a,
 .portfolio-item a:visited {
-  color: inherit;
+  color: #847725;
 }
 
 .portfolio-item p {
