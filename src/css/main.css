@@ -59,6 +59,12 @@ h3 {
   text-transform: uppercase;
 }
 
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
 .portfolio-item {
   margin-bottom: 2.14em;
   text-align: center;
