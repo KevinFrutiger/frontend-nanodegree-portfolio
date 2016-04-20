@@ -67,11 +67,27 @@ h3 {
   text-transform: uppercase;
 }
 
-button {
+.portfolio-item button {
   background: none;
   border: 0;
   padding: 0;
+  position: relative;
   vertical-align: middle; /* remove open space between button and h3 */
+}
+
+/* "i" icon */
+.portfolio-item button::after {
+  background-color: #5F9296;
+  border-radius: 50%;
+  bottom: 10px;
+  color: #fff;
+  content: 'i';
+  font: 400 12px/18px serif;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  width: 20px;
 }
 
 .portfolio-item {
@@ -90,7 +106,9 @@ button {
 
 .portfolio-thumbnail {
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
+
 
 
 
@@ -104,11 +122,17 @@ button {
 
 /* Media queries */
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   h3 {
     font-size: 2.5rem;
   }
 
+  .portfolio-item p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .logo {
     margin-top: 15px;
   }
