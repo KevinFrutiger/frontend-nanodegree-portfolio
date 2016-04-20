@@ -15,6 +15,10 @@ hr {
   margin-top: 9px;
 }
 
+ul {
+  margin-bottom: 0;
+}
+
 .text-thin {
   font-weight: 300;
 }
@@ -33,7 +37,11 @@ hr {
 
 .tagline {
   color: #847725;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Hero image */
@@ -63,6 +71,7 @@ button {
   background: none;
   border: 0;
   padding: 0;
+  vertical-align: middle; /* remove open space between button and h3 */
 }
 
 .portfolio-item {
