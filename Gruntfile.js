@@ -12,19 +12,31 @@ module.exports = function(grunt) {
             width: '100%',
             rename: false,
             suffix: '@3x',
-            quality: 70
+            quality: 90,
+            sharpen: {
+                sigma: 1,
+                radius: 2
+            }
           },
           {
             width: '66.66%',
             rename: false,
             suffix: '@2x',
-            quality: 70
+            quality: 90,
+            sharpen: {
+                sigma: 1,
+                radius: 2
+            }
           },
           {
             width: '33.33%',
             rename: false,
             suffix: '@1x',
-            quality: 70
+            quality: 90,
+            sharpen: {
+                sigma: 1,
+                radius: 2
+            }
           }]
         },
 
