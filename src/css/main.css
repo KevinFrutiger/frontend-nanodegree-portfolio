@@ -105,6 +105,10 @@ button {
 /* Media queries */
 
 @media screen and (max-width: 991px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+
   .logo {
     margin-top: 15px;
   }
