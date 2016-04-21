@@ -96,8 +96,17 @@ h3 {
 }
 
 .portfolio-item {
-  margin-bottom: 2.14em;
+  display: -webkit-flex; /* Safari 8 */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari 8 */
+  flex-direction: column;
+  margin: 0 auto 2.14em;
   text-align: center;
+}
+
+.portfolio-item > button {
+  -webkit-order: -1; /* Safari 8 */
+  order: -1;
 }
 
 .portfolio-item a,
