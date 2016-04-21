@@ -67,9 +67,20 @@ h3 {
   text-transform: uppercase;
 }
 
-.portfolio-item button {
+.portfolio-item {
+  display: -webkit-flex; /* Safari 8 */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari 8 */
+  flex-direction: column;
+  margin: 0 auto 2.14em;
+  text-align: center;
+}
+
+.portfolio-item > button {
   background: none;
   border: 0;
+  -webkit-order: -1; /* Safari 8 */
+  order: -1;
   padding: 0;
   position: relative;
   vertical-align: middle; /* remove open space between button and h3 */
@@ -81,32 +92,14 @@ h3 {
 }
 
 /* "i" icon */
-.portfolio-item button::after {
-  background-color: #5F9296;
-  border-radius: 50%;
+.portfolio-item > button::after {
+  background-image: url(../images/info-icon.svg);
   bottom: 10px;
-  color: #fff;
-  content: 'i';
-  font: 400 12px/18px serif;
+  content: '';
   height: 20px;
   position: absolute;
   right: 10px;
-  text-align: center;
   width: 20px;
-}
-
-.portfolio-item {
-  display: -webkit-flex; /* Safari 8 */
-  display: flex;
-  -webkit-flex-direction: column; /* Safari 8 */
-  flex-direction: column;
-  margin: 0 auto 2.14em;
-  text-align: center;
-}
-
-.portfolio-item > button {
-  -webkit-order: -1; /* Safari 8 */
-  order: -1;
 }
 
 .portfolio-item a,
