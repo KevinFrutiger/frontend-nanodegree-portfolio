@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="container" tabindex="-1">
+  <div id="page-container" class="container" tabindex="-1">
     <header class="row header" role="banner">
       <div class="col-sm-2 col-md-4">
         <img class="img-responsive logo" src="images/kevin-logo.svg" width="127" height="127" alt="">
@@ -143,7 +143,12 @@
               <img class="img-responsive portfolio-thumbnail" src="images/resume-thumb@1x.png" srcset="images/resume-thumb@2x.png 2x, images/resume-thumb@3x.png 3x" alt="">
             </div>
             <div class="col-md-6">
-              <p>This résumé utilizes jQuery and JSON objects for each section. It includes some CSS animations on large screens to bring some subtle life to the page.</p><p><a href="http://kevinfrutiger.github.io/frontend-nanodegree-resume/" target="_blank" aria-label="Résumé live page">Live page</a> | <a href=\"https://github.com/KevinFrutiger/frontend-nanodegree-resume" target="_blank" aria-label="Résumé source on GitHub">Source on GitHub</a></p>
+              <p>This résumé utilizes jQuery and JSON objects for each section. It includes some CSS animations on large screens to bring some subtle life to the page.</p>
+              <ul class="list-inline piped">
+                <li><a href="http://kevinfrutiger.github.io/frontend-nanodegree-resume/" target="_blank" aria-label="Résumé live page">Live page</a></li>
+                <li><a href="https://github.com/KevinFrutiger/frontend-nanodegree-resume" target="_blank" aria-label="Résumé source on GitHub">Source on GitHub</a></li>
+              </ul>
+              </a>
             </div>
           </div>
         </div>
@@ -168,7 +173,11 @@
               <img class="img-responsive portfolio-thumbnail" src="images/arcade-game-thumb@1x.png" srcset="images/arcade-game-thumb@2x.png 2x, images/arcade-game-thumb@3x.png 3x" alt="">
             </div>
             <div class="col-md-6">
-              <p>This clone of the classic arcade game <em>Frogger</em> uses pseudo-classical JavaScript OOP to create player and enemy entities. Using an existing game loop engine and assets, I coded player, gem, and enemy classes as well as the game controls.</p><p>Instructions for play are in the README in the source repository.</p><p>This game is designed for desktop screens and keyboard input only.</p><p><a href="http://kevinfrutiger.github.io/frontend-nanodegree-arcade-game/" target="_blank" aria-label="Arcade Game Clone live page">Live page</a> | <a href="https://github.com/KevinFrutiger/frontend-nanodegree-arcade-game" target="_blank" aria-label="Arcade Game Clone source on GitHub">Source on GitHub</a></p>
+              <p>This clone of the classic arcade game <em>Frogger</em> uses pseudo-classical JavaScript OOP to create player and enemy entities. Using an existing game loop engine and assets, I coded player, gem, and enemy classes as well as the game controls.</p><p>Instructions for play are in the README in the source repository.</p><p>This game is designed for desktop screens and keyboard input only.</p>
+              <ul class="list-inline piped">
+                <li><a href="http://kevinfrutiger.github.io/frontend-nanodegree-arcade-game/" target="_blank" aria-label="Arcade Game Clone live page">Live page</a></li>
+                <li><a href="https://github.com/KevinFrutiger/frontend-nanodegree-arcade-game" target="_blank" aria-label="Arcade Game Clone source on GitHub">Source on GitHub</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -219,7 +228,11 @@
               <img class="img-responsive portfolio-thumbnail" src="images/neighborhood-map-thumb@1x.png" srcset="images/neighborhood-map-thumb@2x.png 2x, images/neighborhood-map-thumb@3x.png 3x" alt="">
             </div>
             <div class="col-md-6">
-              <p>This application utilizes Knockout.js to display a filtlerable list of places as markers on a Google Map. Additional information about the place is retrieved from the Wikipedia API and displayed in an info window for each marker. I designed the UI and coded the full app.</p><p>Instructions for use are in the README in the source repository.</p><p><a href="https://kevinfrutiger.github.io/frontend-nanodegree-neighborhood-map/" target="_blank" aria-label="Neighborhood Map live app">Live app</a> | <a href="https://github.com/KevinFrutiger/frontend-nanodegree-neighborhood-map" target="_blank" aria-label="Neighborhood Map source on GitHub">Source on GitHub</a></p>
+              <p>This application utilizes Knockout.js to display a filtlerable list of places as markers on a Google Map. Additional information about the place is retrieved from the Wikipedia API and displayed in an info window for each marker. I designed the UI and coded the full app.</p><p>Instructions for use are in the README in the source repository.</p>
+              <ul class="list-inline piped">
+                <li><a href="https://kevinfrutiger.github.io/frontend-nanodegree-neighborhood-map/" target="_blank" aria-label="Neighborhood Map live app">Live app</a></li>
+                <li><a href="https://github.com/KevinFrutiger/frontend-nanodegree-neighborhood-map" target="_blank" aria-label="Neighborhood Map source on GitHub">Source on GitHub</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -244,7 +257,11 @@
               <img class="img-responsive portfolio-thumbnail" src="images/health-tracker-thumb@1x.png" srcset="images/health-tracker-thumb@2x.png 2x, images/health-tracker-thumb@3x.png 3x" alt="">
             </div>
             <div class="col-md-6">
-              <p>This Health Tracker application utilizes Backbone.js and a health API to allow the user to query food items and save a calorie total for the day.</p><p>Instructions for use are in the README in the source repository.</p><p><a href="http://kevinfrutiger.github.io/frontend-nanodegree-health-tracker/" target="_blank">Live app</a> | <a href="https://github.com/KevinFrutiger/frontend-nanodegree-health-tracker" target="_blank">Source on GitHub</a></p>
+              <p>This Health Tracker application utilizes Backbone.js and a health API to allow the user to query food items and save a calorie total for the day.</p><p>Instructions for use are in the README in the source repository.</p>
+              <ul class="list-inline piped">
+                <li><a href="http://kevinfrutiger.github.io/frontend-nanodegree-health-tracker/" target="_blank">Live app</a></li>
+                <li><a href="https://github.com/KevinFrutiger/frontend-nanodegree-health-tracker" target="_blank">Source on GitHub</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -293,11 +310,11 @@
                  .on('hidden.bs.modal', onHideModalHandler);
 
       function onShowModalHandler() {
-        $('main').attr('aria-hidden', true);
+        $('#page-container').attr('aria-hidden', true);
       }
 
       function onHideModalHandler() {
-        $('main').attr('aria-hidden', false);
+        $('#page-container').attr('aria-hidden', false);
       }
     })();
   </script>

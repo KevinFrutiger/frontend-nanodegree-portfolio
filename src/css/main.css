@@ -75,6 +75,11 @@ h3 {
   vertical-align: middle; /* remove open space between button and h3 */
 }
 
+.piped > li:not(:first-child)::before {
+  content: "| ";
+  margin-left: -10px; /* Offsets Bootstraps list-inline padding */
+}
+
 /* "i" icon */
 .portfolio-item button::after {
   background-color: #5F9296;
