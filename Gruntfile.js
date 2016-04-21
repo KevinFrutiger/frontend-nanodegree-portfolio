@@ -49,10 +49,13 @@ module.exports = function(grunt) {
       }
     },
 
-    /* Clear out the images directory if it exists */
     clean: {
+      /* Clear out the images directory if it exists */
       generateImages: {
         src: ['src/images']
+      },
+      build: {
+        src: ['dist/*']
       }
     },
 
@@ -75,14 +78,59 @@ module.exports = function(grunt) {
           dest: 'src/images/'
         }]
       }
-    }
+    },
+
+    /* Additional build tasks */
+    htmlmin: {
+      main: { // This level has to be here, even if there's only one.
+        options: {
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          removeComments: true,
+          minifyJS: true,
+          minifyCSS: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/',
+          src: ['*.html'],
+          dest:  'dist/'
+        }]
+      }
+    },
+
+    cssmin: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: 'src/css/',
+          src: ['*.css'],
+          dest: 'dist/css/'
+        }]
+      }
+    },
+
+    imagemin: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: 'dist/images/'
+        }]
+      }
+    },
+
   });
 
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('generate-images', ['clean:generateImages', 'mkdir:generateImages', 'responsive_images', 'copy:generateImages']);
-
+  grunt.registerTask('build', ['clean:build', 'htmlmin', 'cssmin', 'imagemin'])
 };
