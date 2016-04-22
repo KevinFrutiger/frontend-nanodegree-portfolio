@@ -28,7 +28,6 @@ ul {
 }
 
 
-
 /* Header */
 
 .header {
@@ -93,7 +92,7 @@ h3 {
 
 /* "i" icon */
 .portfolio-item > button::after {
-  background-image: url(../images/info-icon.svg);
+  background-image: url(images/info-icon.svg);
   bottom: 10px;
   content: '';
   height: 20px;

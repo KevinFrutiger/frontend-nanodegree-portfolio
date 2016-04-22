@@ -56,7 +56,11 @@ module.exports = function(grunt) {
       },
       build: {
         src: ['dist/*']
-      }
+      },
+      // Remove the css file since it's now inlined.
+      inlinedcss: {
+        src: ['main.css']
+      },
     },
 
     /* Generate the images directory, in case it's missing */
@@ -103,9 +107,9 @@ module.exports = function(grunt) {
       main: {
         files: [{
           expand: true,
-          cwd: 'src/css/',
+          cwd: 'src/',
           src: ['*.css'],
-          dest: 'dist/css/'
+          dest: 'dist/'
         }]
       }
     },
@@ -121,6 +125,26 @@ module.exports = function(grunt) {
       }
     },
 
+    // Embed custom CSS
+    replace: {
+      dist: {
+        options: {
+          patterns: [{ // CSS
+            match: /<link rel=\"stylesheet\" href=\"main.css\">/g,
+            replacement: '<style>' +
+                         '<%= grunt.file.read("dist/main.css") %>' +
+                         '</style>'
+          }]
+        },
+        files: [{
+          expand: true,
+          cwd: 'dist/',
+          src: ['index.html'],
+          dest: 'dist/'
+        }]
+      }
+    }
+
   });
 
   grunt.loadNpmTasks('grunt-mkdir');
@@ -130,7 +154,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-replace');
 
   grunt.registerTask('generate-images', ['clean:generateImages', 'mkdir:generateImages', 'responsive_images', 'copy:generateImages']);
-  grunt.registerTask('build', ['clean:build', 'htmlmin', 'cssmin', 'imagemin'])
+  grunt.registerTask('build', ['clean:build', 'htmlmin', 'cssmin', 'imagemin', 'replace', 'clean:inlinedcss']);
 };
