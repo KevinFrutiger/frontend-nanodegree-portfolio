@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   margin: 13px 0 10px;
   text-transform: uppercase;
 }
@@ -77,9 +77,11 @@ h3 {
 
 .portfolio-item > button {
   background: none;
-  border: 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   -webkit-order: -1; /* Safari 8 */
   order: -1;
+  overflow: hidden;
   padding: 0;
   position: relative;
   vertical-align: middle; /* remove open space between button and h3 */
@@ -110,12 +112,10 @@ h3 {
   font-size: 1.6rem;
 }
 
-.portfolio-thumbnail {
-  border-radius: 10px;
+.portfolio-modal-thumbnail {
   border: 1px solid #ddd;
+  border-radius: 10px;
 }
-
-
 
 
 /* Modal customization */
@@ -165,7 +165,7 @@ h3 {
   }
 
   .hero-image,
-  .portfolio-thumbnail {
+  .portfolio-item > button {
     border-radius: 0;
   }
 }
