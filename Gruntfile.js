@@ -59,7 +59,7 @@ module.exports = function(grunt) {
       },
       // Remove the css file since it's now inlined.
       inlinedcss: {
-        src: ['main.css']
+        src: ['dist/main.css']
       },
     },
 
