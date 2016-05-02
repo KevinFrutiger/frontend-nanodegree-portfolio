@@ -2,6 +2,4 @@
 
 <a href="http://kevinfrutiger.github.io/frontend-nanodegree-portfolio/" target="_blank">View the live page</a>
 
-This was the second project in the _Front-End Web Developer Nanodegree_. The objective was to build a web page from a mock-up using Bootstrap's grid system, and use Grunt build tools to generate the responsive image variations.
-
-I made additional adjustments to imagery and colors, in line with project guidelines.
+This portfolio page was built to match a mock-up PDF. It's an accessible page that utilizes Bootstrap, srcset, and <picture> (where supported) for a responsive layout. Responsive image assets are generated via grunt-responsive-images.
