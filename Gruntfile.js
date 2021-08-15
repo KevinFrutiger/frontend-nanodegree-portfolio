@@ -72,14 +72,25 @@ module.exports = function(grunt) {
       }
     },
 
-    /* Copy the "fixed" images that don't require responsive versions */
+    /* Copy the images */
     copy: {
+      // Copy the "fixed" images that didn't require responsive versions into
+      // the main image src folder
       generateImages: {
         files: [{
           expand: true,
           cwd: 'src/images_src/fixed',
           src: ['*'],
           dest: 'src/images/'
+        }]
+      },
+      // copy all images over to dist
+      images: {
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: 'dist/images/'
         }]
       }
     },
@@ -114,16 +125,16 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      main: {
-        files: [{
-          expand: true,
-          cwd: 'src/images/',
-          src: ['**/*.{png,jpg,gif,svg}'],
-          dest: 'dist/images/'
-        }]
-      }
-    },
+    // imagemin: {
+    //   main: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'src/images/',
+    //       src: ['**/*.{png,jpg,gif,svg}'],
+    //       dest: 'dist/images/'
+    //     }]
+    //   }
+    // },
 
     // Embed custom CSS
     replace: {
@@ -153,9 +164,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  //grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-replace');
 
   grunt.registerTask('generate-images', ['clean:generateImages', 'mkdir:generateImages', 'responsive_images', 'copy:generateImages']);
-  grunt.registerTask('build', ['clean:build', 'htmlmin', 'cssmin', 'imagemin', 'replace', 'clean:inlinedcss']);
+  grunt.registerTask('build', ['clean:build', 'htmlmin', 'cssmin', 'copy:images', 'replace', 'clean:inlinedcss']);
 };
